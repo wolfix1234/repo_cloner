@@ -1,0 +1,30 @@
+first step:
+python3 orchestrator.py
+
+second step:
+
+curl -X POST http://localhost:5000/deploy \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer bWFtYWQxMjM=" \
+  -d '{
+    "repo_url": "https://github.com/wolfix1234/mamad1"
+  }'
+
+third:
+
+see site on http://localhost:3000/
+
+
+
+forth step(change json):
+
+curl -X POST http://localhost:4000/update_json \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer bWFtYWQxMjM=" \
+  -d '{
+    "repo_name": "mamad1",
+    "file_name": "data",
+    "json_content": "{\"key\": \"value\"}"
+  }'
+
+
